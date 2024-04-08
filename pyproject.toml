@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "ths-arrow-play"
+version = "0.1.0"
+description = "a little example code using THS and pyarrow"
+authors = ["Chris Chamberlain <chrisbc@artisan.co.nz>"]
+license = "AGPL3"
+readme = "README.md"
+
+packages = [
+    { include = "src" },
+    { include = "scripts" },
+]
+
+[tool.poetry.scripts]
+2arrow = 'scripts.ths_arrow_migrate:main'
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+toshi-hazard-store = {path = "../toshi-hazard-store"}
+pyarrow = "^15.0.2"
+click = "^8.1.7"
+nzshm-common = "^0.6.1"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+mypy = "^1.9.0"
+pytest = "^8.1.1"
+tox = "^4.14.2"
+black = "^24.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
