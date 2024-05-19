@@ -11,15 +11,15 @@ packages = [
     { include = "scripts" },
 ]
 
-[tool.poetry.scripts]
-2arrow = 'scripts.ths_arrow_migrate:main'
-
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
-toshi-hazard-store = {path = "../toshi-hazard-store"}
 pyarrow = "^15.0.2"
 click = "^8.1.7"
-nzshm-common = "^0.6.1"
+python-dotenv = "^1.0.1"
+pandas = "^2.2.2"
+ipython = "^8.24.0"
+nzshm-common = {git = "https://github.com/GNS-Science/nzshm-common-py.git", rev = "pre-release"}
+nzshm-model = {git = "https://github.com/GNS-Science/nzshm-model.git", rev = "pre-release"}
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^7.0.0"
